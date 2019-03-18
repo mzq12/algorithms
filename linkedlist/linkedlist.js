@@ -27,11 +27,11 @@ LinkedList.prototype = {
         return currentNode === null ? -1 : currentNode
     },
     insert: function(insertedElement, element){
-        var currentNode = this.findByValue(element)
+        var currentNode = this.findByValue(insertedElement)
         if(currentNode === -1){
             return false
         }
-        var newNode = new Node(insertedElement)
+        var newNode = new Node(element)
         newNode.next = currentNode.next
         currentNode.next = newNode
         return true
